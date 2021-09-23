@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">POKEMON SELECCIONADO</div>
+        <div class="panel-body">
+            <div *ngIf="pokemon; else elseBlock">
+                <h4>Nombre: {{pokemon.results[0].nombre}}</h4>
+                <h4>Id: {{pokemon.results[0].uuid}}</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<ng-template #elseBlock>Content to render when condition is false.</ng-template>
